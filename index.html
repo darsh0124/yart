@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>SM - Task Manager</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">kaam kab karoge?</h1>
+         <div class="task-form">
+            <input type="text" id="task-input" placeholder="Enter a new task..." class="task-input">
+            <select class="priority-select">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <input type="datetime-local" id="task-deadline" class="task-deadline">
+            <button id="add-task-btn" class="add-task-btn">Add Task</button>
+        </div>
+
+        <div class="sort-options">
+            <button id="sort-priority-btn">Sort by Priority</button>
+            <button id="sort-deadline-btn">Sort by Deadline</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <select id="filter-tasks">
+            <option value="all">Show All Tasks</option>
+            <option value="completed">Show Completed</option>
+            <option value="incomplete">Show Incomplete</option>
+            <option value="overdue">Show Overdue</option>
+        </select>
+
+        <ul id="task-list" class="task-list"></ul>
+
+        <button id="clear-all-btn" class="clear-all-btn">Clear All</button>
+        <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
+
+        <div id="notification" class="notification"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
